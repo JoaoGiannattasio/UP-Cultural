@@ -1,0 +1,121 @@
+/* Estilos gerais */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: #1a252f;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.logo {
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Seção Hero */
+.hero {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Seções de conteúdo */
+.content-section {
+    background: white;
+    padding: 50px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+/* Links sociais */
+.social-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.social-links a {
+    color: #1a252f;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #2980b9;
+}
+
+/* Rodapé */
+footer {
+    background: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 16px;
+    margin-top: 40px;
+}

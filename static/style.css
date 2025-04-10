@@ -1,0 +1,173 @@
+/* Estilo geral */
+body {
+    background-color: #f8f5e1;
+    color: #1f1f1f;
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Top bar */
+.top-bar {
+    background-color: #004c5c;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #007c91;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Logo fixa no canto superior esquerdo */
+.logo-box {
+    position: absolute;
+    top: 10px;
+    left: 101px;
+    z-index: 1000;
+    width: 120px;
+    height: auto;
+}
+
+.logo-box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navegação centralizada */
+.logo-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #005b70;
+    border-radius: 5px;
+}
+
+/* Banner */
+#banner {
+    background: url('https://www.academia.org.br/sites/default/files/dlp1.jpg') no-repeat center;
+    background-size: cover;
+    padding: 50px 20px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#banner h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Seção de notícias */
+.noticias-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.noticia {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.noticia img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.noticia h3 {
+    color: #005b70;
+    font-size: 18px;
+}
+
+.noticia p {
+    color: #2a2a2a;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Links */
+.noticia a {
+    color: #007c91;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #004c5c;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noticias-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noticia {
+        width: 90%;
+    }
+
+    .logo-box {
+        position: static;
+        margin: 0 auto 10px auto;
+    }
+}

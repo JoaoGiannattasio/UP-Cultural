@@ -23,14 +23,11 @@ header {
     position: relative;
 }
 
-/* Logo fixa no canto superior esquerdo */
+/* Logo centralizada e aumentada */
 .logo-box {
-    position: absolute;
-    top: 10px;
-    left: 101px;
-    z-index: 1000;
-    width: 120px;
+    width: 200px;
     height: auto;
+    margin: 0 auto;
 }
 
 .logo-box img {
@@ -91,57 +88,100 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Seção de notícias */
-.noticias-container {
+/* Carrossel de projetos */
+.carousel-wrapper {
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    overflow: hidden;
     max-width: 1000px;
     margin: 20px auto;
+    padding: 0 40px; /* espaço para setas */
+    box-sizing: border-box;
+  }
+  
+
+.projetos-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
 }
 
-.noticia {
+.projetos {
     background: #ffffff;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 300px;
+    flex: 0 0 auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.noticia:hover {
+.projetos:hover {
     transform: scale(1.05);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.noticia img {
+.projetos img {
     width: 100%;
     max-height: 150px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.noticia h3 {
+.projetos h3 {
     color: #005b70;
     font-size: 18px;
 }
 
-.noticia p {
+.projetos p {
     color: #2a2a2a;
     font-size: 14px;
     text-align: center;
 }
 
 /* Links */
-.noticia a {
+.projetos a {
     color: #007c91;
     font-weight: bold;
     text-decoration: none;
 }
 
-.noticia a:hover {
+.projetos a:hover {
     text-decoration: underline;
 }
+
+/* Setas */
+.arrow {
+    background-color: #007c91;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 60%;
+    z-index: 10;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow:hover {
+    background-color: #005b70;
+}
+
+.arrow.left {
+    left: 20px;
+  }
+  
+  .arrow.right {
+    right: 20px;
+  }
+  
 
 /* Rodapé */
 footer {
@@ -157,17 +197,21 @@ footer {
         align-items: center;
     }
 
-    .noticias-container {
+    .projetos-container {
         flex-direction: column;
         align-items: center;
+        overflow-x: visible;
     }
 
-    .noticia {
+    .projetos {
         width: 90%;
     }
 
     .logo-box {
-        position: static;
         margin: 0 auto 10px auto;
+    }
+
+    .arrow {
+        display: none;
     }
 }

@@ -9,11 +9,7 @@
 <body>
     <header>
         <div class="top-bar">
-            <div class="logo-box">
-                <img src="https://lh3.googleusercontent.com/pw/AP1GczNpQgcKdjrPtG5_hFduq6SHJ40UfEDV6T8GhniGV3KV8pMjqQ6xmiD8U9ZIOz_DVdy3GuQbEAc3Ev6rs0JITr0vBDgavm1dh4FOeGK8pdvwQqrMQBj6wyryosjZdHOkcqSR-zOMCPCFCO2ffz8JPerppg=w911-h911-s-no-gm?authuser=0"
-                     alt="Logo Associação UP" id="logo-up">
-            </div>
-            <span>Bem-vindo à Associação UP</span>
+            <span>Bem-vindo à UPCultural</span>
         </div>
 
         <div class="logo-nav">
@@ -22,8 +18,9 @@
                     <li><a href="{{ url_for('home') }}">Início</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Publicações</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Redes</a></li>
+                    <li><a href="#">Notícias</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,40 +28,65 @@
 
     <main>
         <section id="banner">
-            <h2>Bem-vindo à Associação UP</h2>
-            <p>Promovendo conhecimento e cultura</p>
+            <h1>UPCultural</h1>
+            <div class="logo-box">
+                <img src="{{ url_for('static', filename='Logoredonda.png') }}" alt="Logo Associação UP" id="logo-up">
+            </div>
+            <h2>Num tempo em que se propaga o feio</h2>
+            <h2>a beleza salva mundo</h2>
         </section>
 
         <div id="conteudo">
-            <section id="noticias">
-                <h2>Últimas Notícias</h2>
-                <div class="noticias-container">
-                    <div class="noticia">
-                        <img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/5006/live/384498e0-0e69-11f0-a16f-bf3e3a129fee.jpg.webp" alt="Imagem da notícia 1">
-                        <h3>Marine Le Pen é condenada e declarada inelegível</h3>
-                        <p>A justiça francesa condenou a líder da direita radical Marine Le Pen, tornando-a inelegível.</p>
-                        <a href="https://www.bbc.com/portuguese/articles/c78j58jzp89o" target="_blank">Leia mais</a>
+            <section id="projetos">
+                <h2>Nossos projetos</h2>
+                <div class="carousel-wrapper">
+                    <button class="arrow left" onclick="scrollProjetos(-1)">&#9664;</button>
+                    <div class="projetos-container" id="projetosContainer">
+                        <div class="projetos">
+                            <img src="{{ url_for('static', filename='FestaBoi.jpg') }}" alt="Projeto1">
+                            <h3>Festa do Boi Bumbá</h3>
+                            <p>Festa para ouvidos danSantes.</p>
+                            <a href="" target="_blank">Leia mais</a>
+                        </div>
+                        <div class="projetos">
+                            <img src="{{ url_for('static', filename='CiclodePalestras.jpg') }}" alt="Projeto2">
+                            <h3>A condição humana</h3>
+                            <p>Ciclo de palestras, abordando a condição humana na literatura</p>
+                            <a href="" target="_blank">Leia mais</a>
+                        </div>
+                        <div class="projetos">
+                            <img src="https://i0.statig.com.br/bancodeimagens/04/bf/1q/04bf1qlbavj79ghxnheb8x9nd.jpg" alt="Projeto3">
+                            <h3>Quem lacra não lucra!</h3>
+                            <p>Nasi, vocalista da banda Ira!, é vaiado em show após gritar 'sem anistia' e reage: 'Vão embora!'.</p>
+                            <a href="https://g1.globo.com/mg/minas-gerais/noticia/2025/04/03/nasi-vocalista-da-banda-ira-e-vaiado-em-show-apos-gritar-sem-anistia-e-reage-vao-embora.ghtml" target="_blank">Leia mais no G1</a>
+                        </div>
+                        <div class="projetos">
+                            <img src="https://i0.statig.com.br/bancodeimagens/04/bf/1q/04bf1qlbavj79ghxnheb8x9nd.jpg" alt="Projeto3">
+                            <h3>Vendas da Tesla caem 13%</h3>
+                            <p>Impactadas por fatores econômicos e a imagem de Elon Musk.</p>
+                            <a href="https://g1.globo.com/carros/dinheiro-sobre-rodas/noticia/2025/04/02/vendas-da-tesla-caem-13percent-no-1o-trimestre-com-reducao-da-demanda-e-reacao-a-elon-musk.ghtml" target="_blank">Leia mais no G1</a>
+                        </div>
+                        <!-- Adicione mais projetos se quiser -->
                     </div>
-                    <div class="noticia">
-                        <img src="https://s2-g1.glbimg.com/anlhpY4IT96SsGBiO86fEeKiWEs=/0x0:4953x3392/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/d/o/4ekuu6S2evct2gHWM4Hg/2025-03-31t100245z-1945111888-rc2jscaxmbwr-rtrmadp-3-usa-trump-musk-driver.jpg" alt="Imagem da notícia 2">
-                        <h3>Musk deixará governo Trump</h3>
-                        <p>Elon Musk deixará seu cargo no governo de Donald Trump nas próximas semanas, segundo fontes.</p>
-                        <a href="https://g1.globo.com/mundo/noticia/2025/04/02/musk-deixara-governo-trump-nas-proximas-semanas-diz-site.ghtml" target="_blank">Leia mais</a>
-                    </div>
-                    <div class="noticia">
-                        <img src="https://i0.statig.com.br/bancodeimagens/04/bf/1q/04bf1qlbavj79ghxnheb8x9nd.jpg" alt="Imagem da notícia 3">
-                        <h3>Vendas da Tesla caem 13% no 1º trimestre, com redução da demanda e reação a Elon Musk</h3>
-                        <p>As vendas da Tesla caíram significativamente no primeiro trimestre, impactadas por fatores econômicos e a imagem de Elon Musk.</p>
-                        <a href="https://g1.globo.com/carros/dinheiro-sobre-rodas/noticia/2025/04/02/vendas-da-tesla-caem-13percent-no-1o-trimestre-com-reducao-da-demanda-e-reacao-a-elon-musk.ghtml" target="_blank">Leia mais no G1</a>
-                    </div>
+                    <button class="arrow right" onclick="scrollProjetos(1)">&#9654;</button>
                 </div>
             </section>
         </div>
-  
     </main>
 
     <footer>
         <p>&copy; 2025 Associação UP - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function scrollProjetos(direction) {
+            const container = document.getElementById('projetosContainer');
+            const scrollAmount = 320;
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>

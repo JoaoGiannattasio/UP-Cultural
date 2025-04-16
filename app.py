@@ -6,5 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/redes')
+def redes():
+    return render_template('redes.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

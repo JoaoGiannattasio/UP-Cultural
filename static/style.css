@@ -215,3 +215,51 @@ footer {
         display: none;
     }
 }
+
+/* Estilização aba redes */
+#redes body {
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #003366;
+    max-width: 400px;
+    width: 90%;
+}
+
+.card h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #777;
+    font-size: 16px;
+}
+
+.voltar {
+    border-radius: 8px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #003366;
+    color: white;
+}
